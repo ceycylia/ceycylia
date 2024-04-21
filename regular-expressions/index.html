@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <!-- Include Tailwind CSS -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="../css/output.css" />
+
+    <style>
+      /* Custom background styles */
+      body {
+        background-color: #f3f4f6; /* Light gray background color */
+        background-image: url("./Outpost\ 77.jpg"); /* Set your background image */
+        background-size: cover; /* Cover the entire container */
+        background-repeat: no-repeat; /* Do not repeat the background image */
+        min-height: 100vh; /* Minimum height of the viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Form container styles */
+      .form-container {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.9
+        ); /* Semi-transparent white background */
+        border-radius: 10px;
+        padding: 20px;
+        width: 400px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="form-container">
+      <h1 class="mb-4 text-2xl font-bold">Form Validation</h1>
+      <form id="_panelInput" class="space-y-4">
+        <div>
+          <label for="inputName" class="block font-medium">Name:</label>
+          <input
+            type="text"
+            id="inputName"
+            name="inputName"
+            class="w-full form-input"
+            placeholder="Enter your name"
+          />
+          <p id="nameError" class="text-red-500"></p>
+        </div>
+        <div>
+          <label for="NIM" class="block font-medium">Nim Mahasiswa :</label>
+          <input
+            type="text"
+            id="NIM"
+            name="NIM"
+            class="w-full form-input"
+            placeholder="Enter your NIM"
+          />
+          <p id="NimError" class="text-red-500"></p>
+        </div>
+        <div>
+          <label for="email" class="block font-medium">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="w-full form-input"
+            placeholder="Enter your email"
+          />
+          <p id="emailError" class="text-red-500"></p>
+        </div>
+        <div>
+          <label for="phone" class="block font-medium">Phone:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            class="w-full form-input"
+            placeholder="Enter your phone number"
+          />
+          <p id="phoneError" class="text-red-500"></p>
+        </div>
+        <div>
+          <label for="password" class="block font-medium">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="w-full form-input"
+            placeholder="Enter your password"
+          />
+
+          <div id="passwordError" class="mt-2" style="display: none">
+            <h3 class="text-lg text-black">
+              Password must contain the following:
+            </h3>
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">
+              A <b>capital (uppercase)</b> letter
+            </p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="symbol" class="invalid">A <b>symbol</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+          </div>
+        </div>
+        <div>
+          <label for="confirmPassword" class="block font-medium"
+            >Confirm Password:</label
+          >
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            class="w-full form-input"
+            placeholder="Confirm your password"
+          />
+          <p id="confirmPasswordError" class="text-red-500"></p>
+        </div>
+        <button
+          type="submit"
+          class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- Include JavaScript -->
+    <script src="./regex.js"></script>
+  </body>
+</html>
+
